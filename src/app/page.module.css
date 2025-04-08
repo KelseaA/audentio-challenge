@@ -1,0 +1,39 @@
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.row {
+  &:nth-child(odd) .square {
+    &:nth-child(even) {
+      background-color: lightgray;
+    }
+  }
+  &:nth-child(even) .square {
+    &:nth-child(odd) {
+      background-color: lightgray;
+    }
+  }
+}
+
+.square {
+  padding: 1.5rem;
+}
+
+.active {
+  background-color: red !important;
+}
